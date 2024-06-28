@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class TipoNoticas(models.Model):
@@ -17,6 +18,7 @@ class Periodista(models.Model):
     telefono = models.CharField(max_length=20)
     correo = models.CharField(max_length=40)
     fecha_ingreso = models.DateTimeField(auto_now_add=True)
+    imagen = CloudinaryField('imagen')
     
 
     def __str__(self):
