@@ -1,0 +1,102 @@
+{% extends "core/base.html" %} 
+
+{% load static %}
+
+{% block css %}
+<!-- aqui se cargan -->
+{% endblock css %}
+
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripciones</title>
+    <link rel="stylesheet" href="{% static 'core/css/stylesus.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Suscripciones</h1>
+        <p>Elige el plan que más te convenga</p>
+    </header>
+    <section class="subscription-plans">
+        <div class="plan">
+            <h2>Silver</h2>
+            <p>$5/mes</p>
+            <ul>
+                <li>Acceso a contenido exclusivo</li>
+                <li>Sin anuncios</li>
+            </ul>
+            <div style="justify-content: center;" class="text-center" id="paypal-button"></div>
+        </div>
+        <div class="plan">
+            <h2>Gold</h2>
+            <p>$10/mes</p>
+            <ul>
+                <li>Todo en Silver</li>
+                <li>Acceso anticipado a noticias</li>
+                <li>Descuentos en eventos</li>
+            </ul>
+            <div style="justify-content: center;" class="text-center" id="paypal-button"></div>
+        </div>
+        <div class="plan">
+            <h2>Platinum</h2>
+            <p>$20/mes</p>
+            <ul>
+                <li>Todo en Gold</li>
+                <li>Acceso a contenido premium</li>
+                <li>Asistencia personalizada</li>
+            </ul>
+            <div style="justify-content: center;" class="text-center" id="paypal-button"></div>
+        </div>
+    </section>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+paypal.Button.render({
+// Configure environment
+env: 'sandbox',
+client: {
+sandbox: 'Af_xKcVyX7pnNw7kdGQMWPa_unIpMgoQM_vJAI6Qn5lmYRNu_kl6ISMIsmiI8gUttx7Icbc0FyvdxCr0',
+production: 'demo_production_client_id'
+},
+// Customize button (optional)
+locale: 'en_US',
+style: {
+size: 'small',
+color: 'blue',
+shape: 'pill',
+},
+
+// Enable Pay Now checkout flow (optional)
+commit: true,
+
+// Set up a payment
+payment: function (data, actions) {
+return actions.payment.create({
+transactions: [{
+amount: {
+total: '10.00',
+currency: 'USD'
+}
+}]
+});
+},
+// Execute the payment
+onAuthorize: function (data, actions) {
+return actions.payment.execute().then(function () {
+// Show a confirmation message to the buyer
+window.alert('Thank you for your purchase!');
+});
+}
+}, '#paypal-button');
+
+</script>
+{% endblock contenido %}
+
+{% block js %}
+    
+<!-- aqui se cargan -->
+    
+{% endblock js %}
+    

@@ -1,0 +1,249 @@
+
+{% extends "core/base.html" %} 
+
+{% load static %}
+
+{% block css %}
+<!-- aqui se cargan -->
+{% endblock css %}
+
+{% block contenido %}
+
+<!-- Main News Slider Start -->
+
+<!-- Main News Slider End -->
+
+
+<!-- Breaking News Start -->
+<div class="container-fluid bg-dark py-3 mb-3">
+    <div class="container">
+        <div class="row align-items-center bg-dark">
+            <div class="col-12">
+                <div class="d-flex justify-content-between">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breaking News End -->
+
+
+<!-- Featured News Slider Start -->
+<div class="container-fluid pt-5 mb-3">
+
+</div>
+<!-- Featured News Slider End -->
+
+
+<!-- News With Sidebar Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Nuestras Noticias</h4>
+                            <a class="text-secondary font-weight-medium text-decoration-none" href="{% url 'Categorias' %}">View All</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-100" src="{% static 'core/img/news-700x435-1.jpg' %}" style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Entretenimiento</a>
+                                    <a class="text-body" href=""><small>Jan 10, 2024</small></a>
+                                </div>
+                                <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">Estreno de la Nueva Película de Ciencia Ficción 'Nebulosa'...</a>
+                                <p class="m-0">La anticipada película de ciencia ficción "Nebulosa" ha llegado a los cines este fin de semana, cautivando a críticos y fanáticos por igual con sus impresionantes efectos visuales y una trama innovadora que explora los límites del universo conocido</p>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle mr-2" src="{% static 'core/img/user.jpg' %}" width="25" height="25" alt="">
+                                    <small>John Doe</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-100" src="{% static 'core/img/news-700x435-2.jpg' %}" style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Internacional</a>
+                                    <a class="text-body" href=""><small>Jan 15, 2024</small></a>
+                                </div>
+                                <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">Protestas Masivas en Europa exigen Acción Urgente...</a>
+                                <p class="m-0">Multitudes de manifestantes han llenado las calles de varias capitales europeas para exigir medidas inmediatas y humanitarias frente a la creciente crisis de refugiados. Con pancartas que clamaban por solidaridad y políticas más compasivas, los ciudadanos han presionado a los líderes europeos</p>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle mr-2" src="{% static 'core/img/user.jpg' %}" width="25" height="25" alt="">
+                                    <small>John Doe</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-100" src="{% static 'core/img/news-700x435-3.jpg' %}" style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Deporte</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2024</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="">Récord Mundial Batido en los Juegos Olímpicos de Francia...</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle mr-2" src="{% static 'core/img/user.jpg' %}" width="25" height="25" alt="">
+                                    <small>John Doe</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-100" src="{% static 'core/img/news-700x435-4.jpg' %}" style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Tecnologia</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="">Lanzamiento del Nuevo Dispositivo Revolucionario...</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle mr-2" src="{% static 'core/img/user.jpg' %}" width="25" height="25" alt="">
+                                    <small>John Doe</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" src="{% static 'core/img/news-110x110-1.jpg' %}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Internacional</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Acuerdo Global sobre Comercio Digital Impulsa Economías en Desarrollo</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" src="{% static 'core/img/news-110x110-2.jpg' %}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Deporte</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Simone Biles Regresa Triunfante en los Juegos Olímpicos de París...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" src="{% static 'core/img/news-110x110-3.jpg' %}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Tecnologia</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Empresa Espacial Anuncia Viaje Turístico a Marte para el Año 2030</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" src="{% static 'core/img/news-110x110-4.jpg' %}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Entretenimiento</a>
+                                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">trella Internacional de Netflix Revela Detalles Inesperados de su...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+
+
+
+
+
+                <!-- Newsletter Start -->
+                <div class="mb-3">
+                    <div class="section-title mb-0">
+                        <h4 class="m-0 text-uppercase font-weight-bold">Subcripcion</h4>
+                    </div>
+                    <div class="bg-white text-center border border-top-0 p-3">
+                        <p>Ver Nuestros Planes</p>
+                        <div class="input-group mb-2" style="width: 100%;">
+                            <div class="input-group-append">
+                                <a href="{% url 'planes' %}"><button  class="btn btn-primary font-weight-bold px-3">Planes</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter End -->
+
+                <!-- Tags Start -->
+                <div class="mb-3">
+                    <div class="section-title mb-0">
+                        <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
+                    </div>
+                    <div class="bg-white border border-top-0 p-3">
+                        <div class="d-flex flex-wrap m-n1">
+                            <a href="{% url 'politica' %}" class="btn btn-sm btn-outline-secondary m-1">Politica</a>
+                            <a href="{% url 'entretenimiento' %}" class="btn btn-sm btn-outline-secondary m-1">Entretenimiento</a>
+                            <a href="{% url 'internacional' %}" class="btn btn-sm btn-outline-secondary m-1">Internacional</a>
+                            <a href="{% url 'tecnologia' %}" class="btn btn-sm btn-outline-secondary m-1">Tecnologia</a>
+                            <a href="{% url 'deporte' %}" class="btn btn-sm btn-outline-secondary m-1">Deporte</a>
+                    </div>
+                </div>
+                <!-- Tags End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- News With Sidebar End -->
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+{% endblock contenido %}
+
+{% block js %}
+<!-- aqui se cargan -->
+
+{% endblock js %}
+
+
+ 

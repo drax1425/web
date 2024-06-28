@@ -1,0 +1,78 @@
+{% extends "core/base.html" %} 
+
+{% load static %}
+
+{% block css %}
+<style>
+    table {
+        width: 75%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000000;
+        text-align: left;
+        padding: 8px;
+    }
+    th {
+        background-color: #000000;
+        color: rgb(0, 0, 0);  
+    }
+    tr:nth-child(even) {
+        background-color: #f7f7f7;
+    }
+</style>
+{% endblock css %}
+
+{% block contenido %}
+
+<div class="col-12">
+    <div class="card table-card">
+        <div class="card-header">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <h5 class="mb-3 mb-sm-0" style="color: black;">Lista de periodistas</h5>
+                <div>
+                    <a href="{% url 'empleadosadd' %}" class="btn btn-primary">Añadir periodista</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body pt-3">
+            <div class="table-responsive">
+                <table class="table table-hover" id="pc-dt-simple">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Acción</th>  
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for periodista in page_obj %}
+                        <tr>
+                                <td>{{ periodista.nombre }} {{ periodista.apellido }}</td>
+                                <td>{{ periodista.telefono }}</td>
+                                <td>{{ periodista.correo }}</td>
+                            <td>
+                                <a href="{% url 'empleadosupdate' periodista.rut %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a onclick="confirmarDelete('{{ aux.id }}')" class="btn btn-danger btn-sm">Eliminar</a>
+
+                                
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contenido %}
+
+{% block js %}
+
+{% endblock js %}
+
+
+

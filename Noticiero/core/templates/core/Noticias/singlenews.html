@@ -1,0 +1,150 @@
+{% extends "core/base.html" %} 
+
+{% load static %}
+
+{% block css %}
+<!-- aqui se cargan -->
+{% endblock css %}
+
+{% block contenido %}
+
+
+    <!-- Breaking News Start -->
+    <div class="container-fluid mt-5 mb-3 pt-3">
+
+    </div>
+    <!-- Breaking News End -->
+
+
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+                        <img class="img-fluid w-100" src="{% static 'core/img/news-700x435-1.jpg' %}" style="object-fit: cover;">
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                    href="">Internacional</a>
+                                <a class="text-body" href="">Jan 01, 2045</a>
+                            </div>
+                            <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">Cumbre Global sobre Cambio Climático: Líderes Mundiales Discuten Nuevas Estrategias para Reducir Emisiones</h1>
+                            <p>En la reciente Cumbre Global sobre Cambio Climático, celebrada en Ginebra, líderes de más de 100 países se reunieron para debatir y delinear nuevas estrategias para abordar la crisis climática. El evento, que duró cinco días, contó con la presencia de jefes de estado, científicos, activistas y representantes de organizaciones no gubernamentales, todos unidos por un objetivo común: reducir las emisiones de gases de efecto invernadero y limitar el calentamiento global a 1.5 grados Celsius por encima de los niveles preindustriales</p>
+                            <p>Uno de los temas más destacados de la cumbre fue la necesidad urgente de transición hacia fuentes de energía renovable. Varios países anunciaron planes ambiciosos para aumentar su capacidad de energía solar y eólica, mientras que otros se comprometieron a eliminar gradualmente el uso de carbón y otros combustibles fósiles. Estas iniciativas forman parte de un esfuerzo global por descarbonizar las economías y fomentar el desarrollo sostenible.</p>
+
+                            <p>Además de las políticas energéticas, la cumbre también abordó la importancia de la conservación de la biodiversidad y la protección de los ecosistemas. Los líderes discutieron medidas para prevenir la deforestación, restaurar hábitats degradados y promover prácticas agrícolas sostenibles. Estas acciones son esenciales no solo para combatir el cambio climático, sino también para asegurar la seguridad alimentaria y proteger la vida silvestre.</p>
+                            <img class="img-fluid w-50 float-right mr-4 mb-2" src="{% static 'core/img/news-800x500-2.jpg' %}">
+                            <p>La financiación climática fue otro tema crucial en la cumbre. Los países desarrollados reafirmaron su compromiso de movilizar 100 mil millones de dólares anuales para apoyar a las naciones en desarrollo en sus esfuerzos de mitigación y adaptación. Este financiamiento es vital para ayudar a los países más vulnerables a enfrentar los impactos del cambio climático y a implementar tecnologías limpias y resilientes. La cumbre concluyó con un llamado a la acción urgente y coordinada, subrayando que el tiempo para actuar es ahora.</p>
+                        </div>
+                        <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle mr-2" src="{% static 'core/img/user.jpg' %}" width="25" height="25" alt="">
+                                <span>John Doe</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="ml-3"><i class="far fa-eye mr-2"></i>12345</span>
+                                <span class="ml-3"><i class="far fa-comment mr-2"></i>123</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News Detail End -->
+
+                    <!-- Comment List Start -->
+                    <!-- Comment List End -->
+
+                    <!-- Comment Form Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Deja Tu Comentario</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-4">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">Name *</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email *</label>
+                                            <input type="email" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" class="form-control" id="website">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <input type="submit" value="Leave a comment"
+                                        class="btn btn-primary font-weight-semi-bold py-2 px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Comment Form End -->
+                </div>
+
+                <div class="col-lg-4">
+
+                    <!-- Ads Start -->
+
+                    <!-- Ads End -->
+
+                    <!-- Popular News Start -->
+
+                    <!-- Popular News End -->
+
+                    <!-- Newsletter Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Subcripcion</h4>
+                        </div>
+                        <div class="bg-white text-center border border-top-0 p-3">
+                            <p>Ver Nuestros Planes</p>
+                            <div class="input-group mb-2" style="width: 100%;">
+                                <div class="input-group-append">
+                                    <a href="{% url 'planes' %}"><button  class="btn btn-primary font-weight-bold px-3">Ver Planes</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Newsletter End -->
+                    <!-- Cambio de Moneda Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Cambio De Moneda</h4>
+                        </div>
+                        <div class="bg-white text-center border border-top-0 p-3">
+                            <p>Tipo de Cambio</p>
+                            
+                        </div>
+                    </div>
+                    <!-- Cambio de Moneda End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+{% endblock contenido %}
+
+{% block js %}
+<!-- aqui se cargan -->          
+{% endblock js %}
+        

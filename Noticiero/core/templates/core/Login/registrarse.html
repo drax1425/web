@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock css %}
+
+{% block contenido %}
+<div class="container">
+    <div class="card">
+        <h2 class="text-center mt-3 title">Regístrate aquí!</h2>
+        <div class="card-body">
+            <form action="{% url 'registrarse' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-space">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" id="username" class="form-control" required>
+                </div>
+                <div class="form-space">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-space">
+                    <label for="number" class="form-label">Number</label>
+                    <input type="number" name="number" id="number" class="form-control">
+                </div>
+                <div class="form-space">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <div class="form-space">
+                    <label for="repeat-password" class="form-label">Repeat password</label>
+                    <input type="password" name="repeat-password" id="repeat-password" class="form-control" required>
+                </div>
+                <div class="btn-submit">
+                    <input type="submit" value="Registrarse" class="btnes btn-primary">
+                </div>
+            </form>
+            <p class="text-center" style="color:#000000;">¿Ya tienes una cuenta? <a style="text-decoration:none;" href="{% url 'inicio' %}">Iniciar sesión</a></p>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}
